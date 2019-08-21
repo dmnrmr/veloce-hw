@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+form {
+  padding: 1rem 0;
+
+  label {
+    padding-right: 0.25rem;
+    text-transform: capitalize;
+  }
+
+  div {
+    padding-bottom: 0.5rem;
+  }
+}

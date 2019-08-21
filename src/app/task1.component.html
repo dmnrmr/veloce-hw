@@ -1,0 +1,20 @@
+<div class="homework">
+  <textarea rows="10" [(ngModel)]="content"></textarea>
+
+  <form [formGroup]="form" *ngIf="form">
+    <div *ngFor="let formControl of formControls; trackBy: trackByFormControlKey">
+      <label>{{ formControl.key | placeholderLabel }}</label>
+      <input type="text" [formControl]="formControl.control" />
+    </div>
+  </form>
+
+  <ng-container *ngFor="let value of result; trackBy: trackByValue">
+    <tag-input [value]="value"></tag-input>
+  </ng-container>
+
+  <button id="parseTemplate" type="submit" (click)="parseTemplate()">Parse Template</button>
+
+  <button id="displayResult" type="submit" (click)="displayResult()">Display result</button>
+
+  <a routerLink="task2">Task2</a>
+</div>
